@@ -24,7 +24,8 @@ const cancelBtn = modal.querySelector(".cancelbtn")
 const loginForm = modal.querySelector("form")
 const pinLogin = document.querySelector(".pin-login")
 const passwordMessageDiv = document.querySelector("#password-message")
-
+const redeemBtn = document.querySelector("#redeem")
+const prizeCollection = document.querySelector("#collection")
 
 //application state
 let allUsers
@@ -73,7 +74,7 @@ function handleNavBarClicks(event) {
     } else if (event.target.id === "memory" && currentUser || event.target.id === "sliding" && currentUser) {
         loadAndSetGame(event.target.id)
     } else if (event.target.id === "memory" && !currentUser || event.target.id === "sliding" && !currentUser || event.target.id === "prizes" && !currentUser) {
-        alert("Please Log In!")
+        alert("Please Sign Up or Log In!")
     } else if (event.target.id === "about") {
         setDisplay([gameTitle, timer, startButton, prizeDisplay, gameDisplay], "none")
         setDisplay([aboutDisplay], "block")
@@ -93,7 +94,7 @@ function loadAbout() {
     <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimage.remarqueble.com%2Fuspto%2F85324748&f=1&nofb=1" alt="">
     <h2>Play each game as best you can, and try to beat the clock! <br>
     The faster you play, the more points you get!</h2>
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.P-26ZmRveihJNRAoWvnRbAHaE7%26pid%3DApi&f=1" alt="">`
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.P-26ZmRveihJNRAoWvnRbAHaE7%26pid%3DApi&f=1" alt=""><br> <h2>Redeem your Points to collect Player's Cards at the Prize Store! </h2>`
 }
 
 // sign up form

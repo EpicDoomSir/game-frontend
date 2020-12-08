@@ -9,11 +9,21 @@ const renderUserProfile = (userObj) => {
     username.textContent = `Username: ${userObj.username}`
     points.textContent = `Points: ${userObj.totalPoints}`
     avatar.src = userObj.avatar
+    redeemBtn.addEventListener("click", function(){
+      setDisplay([gameTitle, timer, startButton, aboutDisplay, gameDisplay], "none")
+      prizeList.innerHTML = " "
+      setDisplay([prizeHeader, prizeP, prizeList], "block")
+      setDisplay([prizeDisplay], "flex")
+      displayAllPrizes()
+    })
     deleteButton.addEventListener("click", deleteUser)
     userPrizeList.innerHTML= ""
-    currentUser.prizes.forEach(renderBought)
-    
-    
+    if (currentUser.prizes === undefined || currentUser.prizes.length === 0){
+      return
+    } else {
+      setDisplay([prizeCollection], "block")
+      currentUser.prizes.forEach(renderBought)
+    }
 }
 
 function deleteUser(){

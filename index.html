@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./src/css/sliding.css" />
     <link rel="stylesheet" href="./src/css/index.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>Switch</title>
 </head>
 <body>
     <main>
@@ -43,9 +43,12 @@
                 <li class="item" id="username"></li>
                 <li class="item" id="points"></li>
                 <br>
+                <button id="redeem">Redeem Points</button>
+                <br>
+                <br>
                 <button id="deleteUser">Delete User Profile</button>
                 <br>
-                 <h2>Collected Cards</h2>
+                 <h2 id="collection" style="display:none">Collected Cards</h2>
                 <ul id="user-prize-list" class="cards"></ul>
            </ul>
         </aside>
@@ -55,7 +58,7 @@
         </section>
         <!-- Game Display Area -->
         <section >
-            <audio id="music" src="src/music/Bold - AShamaluevMusic (1).mp3" controls></audio>
+            <audio id="music" src="src/music/Bold - AShamaluevMusic (1).mp3"></audio>
             <br>
             <br>  
             <div id="timer" style="display:none">00:00</div>
@@ -69,7 +72,7 @@
         <!-- Prize Display Area -->
         <section id="prize-display" style="display: none" class="container">
             <h2 id="prize-header" style="display:none">Prize Collector's Cards</h2>
-            <p id="prize-p" style="display:none">(Please note all stats can not be reflected on player's cards)</p>
+            <p id="prize-p" style="display:none">As this is my first deployed website, Player's Cards are a shoutout to all my Flatiron School instructors! Checkout <a href="flatironschool.com">Flatiron School</a> </p>
             <ul id="prize-list" class="prize-cards" style="display:none">
             </ul>
         </section>
@@ -107,10 +110,10 @@
                     <input type="text" name="username" placeholder="Enter Username" value="" required><br>
                     <br>
                     <label for="pin"><b>Pin</b></label>
-                    <input type="Pin" name="pin" placeholder="Enter Pin" value="" required><br>
+                    <input type="password" name="pin" placeholder="Enter Pin" value="" required><br>
                     <br>
                     <label for="avatar"><b>Avatar</b></label>
-                    <input type="avatar" name="avatar" placeholder="Image Url" value=""><br>
+                    <input type="avatar" name="avatar" placeholder="Image Url" value="" required><br>
                     <br>
                     <button id="submitbtn">Sign Up</button><br>
                     <br>
