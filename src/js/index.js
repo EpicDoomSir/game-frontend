@@ -1,4 +1,4 @@
-URL = "http://localhost:3000"
+URL = "https://aqueous-beach-66951.herokuapp.com"
 
 //dom elements
 const navBar = document.querySelector(".topnav")
